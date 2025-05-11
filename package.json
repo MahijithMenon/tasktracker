@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon task-tracker.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pm2 start task-tracker.js --watch",
     "stop": "pm2 delete task-tracker.js"

@@ -1,0 +1,23 @@
+{
+  "name": "tasktracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "pm2 start task-tracker.js --watch",
+    "stop": "pm2 delete task-tracker.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.1",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
+  "bin": {
+  "task-cli": "./cli.js"
+}
+}

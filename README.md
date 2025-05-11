@@ -109,3 +109,8 @@ Save for system boot:
 pm2 save
 pm2 startup
 
+
+.env.example
+URL=http://localhost:3000
+
+

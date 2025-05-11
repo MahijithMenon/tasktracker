@@ -39,7 +39,7 @@ app.post("/tasks", (req, res) => {
 app.delete("/tasks", (req, res) => {
     try {
         const tasks = loadTasks();
-        if (req.body.id <= tasks.length) {
+        if (Number(req.body.id) <= tasks.length) {
             const updatedTasks = tasks.filter(task => task.id !== req.body.id)
             saveTasks(updatedTasks);
             res.json({ message: "Task Deleted successfully", task: updatedTasks, id: req.body.id });

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "pm2 start task-tracker.js --watch",
+    "dev": "pm2 start task-tracker.js --watch",
     "stop": "pm2 delete task-tracker.js"
   },
   "keywords": [],
@@ -14,10 +14,11 @@
   "description": "",
   "dependencies": {
     "axios": "^1.8.1",
+    "dotenv": "^16.5.0",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
   },
   "bin": {
-  "task-cli": "./cli.js"
-}
+    "task-cli": "./cli.js"
+  }
 }

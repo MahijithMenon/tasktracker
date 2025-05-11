@@ -1,9 +1,10 @@
 // server.js
 const express = require("express");
 const fs = require("fs");
+require("dotenv").config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const TASKS_FILE = "tasks.json";
 
 app.use(express.json());
@@ -23,9 +24,9 @@ const saveTasks = (tasks) => {
     fs.writeFileSync(TASKS_FILE, JSON.stringify(tasks, null, 2));
 };
 
-app.get('/',(req,res)=>[
+app.get('/',(req,res)=>{
     res.json("Working")
-])
+})
 
 app.post("/tasks", (req, res) => {
     const tasks = loadTasks();

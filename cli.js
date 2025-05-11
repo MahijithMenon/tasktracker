@@ -2,7 +2,8 @@
 const axios = require("axios");
 const { text } = require("express");
 const args = process.argv.slice(2);
-const url = process.env.URL
+require("dotenv").config();
+const url = process.env.URL;
 
 if (args[0] === "add" && args[1]) {
     axios.post(`${url}/tasks`, { text: args.slice(1).join(" ") })
